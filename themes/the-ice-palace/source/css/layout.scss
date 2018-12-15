@@ -6,32 +6,6 @@
   background: #ddd;
 }
 
-.nav {
-  width: 800px;
-  margin: 0 auto;
-}
-.nav--list {
-  display: flex;
-  justify-content: space-around;
-}
-.nav--item {
-  display: block;
-  width: 140px;
-}
-.nav--link {
-  display: block;
-  text-decoration: none;
-  font-size: 24px;
-  text-align: center;
-}
-.nav--image {
-  display: block;
-  width: 60px;
-  height: 60px;
-  margin: 5px auto 0 auto;
-  background: #888;
-}
-
 .container {
   width: 800px;
   padding: 40px;

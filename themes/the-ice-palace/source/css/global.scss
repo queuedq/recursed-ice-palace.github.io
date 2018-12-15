@@ -1,5 +1,10 @@
-html, body {
+html {
   height: 100%;
+}
+
+body {
+  position: relative;  // For column (deco) positioning
+  min-height: 100%;
 }
 
 * {
