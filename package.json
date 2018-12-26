@@ -1,7 +1,13 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
+  "name": "the-ice-palace.github.io",
+  "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "npm run server",
+    "server": "hexo server --config _config.yml,_config.dev.yml",
+    "server-prod": "hexo server --config _config.yml",
+    "build": "hexo clean && hexo generate"
+  },
   "hexo": {
     "version": "3.8.0"
   },
