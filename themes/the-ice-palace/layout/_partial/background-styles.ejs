@@ -1,0 +1,38 @@
+<style type="text/css">
+  body {
+    background: url(<%- url_for('images/background.png') %>);
+    background-size: 100px 100px;
+    background-position: center;
+    background-repeat: repeat;
+    image-rendering: pixelated;
+  }
+  .deco-ceiling {
+    background: url(<%- url_for('images/ceiling.png') %>);
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat-x;
+    image-rendering: pixelated;
+  }
+  .deco-columns--column.--left {
+    background: url(<%- url_for('images/column_left.png') %>);
+    background-repeat: repeat-y;
+    background-size: contain;
+    image-rendering: pixelated;
+  }
+  .deco-columns--column.--right {
+    background: url(<%- url_for('images/column_right.png') %>);
+    background-repeat: repeat-y;
+    background-size: contain;
+    image-rendering: pixelated;
+  }
+  .deco-columns--head.--left {
+    background: url(<%- url_for('images/column_head_left.png') %>);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+  .deco-columns--head.--right {
+    background: url(<%- url_for('images/column_head_right.png') %>);
+    background-size: cover;
+    image-rendering: pixelated;
+  }
+</style>
