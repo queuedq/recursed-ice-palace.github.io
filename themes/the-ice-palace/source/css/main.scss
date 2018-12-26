@@ -1,7 +1,10 @@
-@import 'vendors/normalize.css';
-@import 'vendors/reset.css';
+@import 'vendors/normalize';
+@import 'vendors/reset';
 @import 'global';
 
 @import 'layout';
+
+// Components
 @import 'components/deco';
+@import 'components/logo';
 @import 'components/nav';

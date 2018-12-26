@@ -7,13 +7,15 @@
     <div class="deco-columns--head --right"></div>
   </div>
   <div class="deco-ceiling"></div>
-  <header>
-    <img class="logo" />
-  </header>
-  <%- partial('_partial/nav') %>
-  <main class="container">
-    <%- body %>
-  </main>
+  <div class="container">
+    <header>
+      <img class="logo" src="<%- url_for('images/logo.png') %>" />
+    </header>
+    <%- partial('_partial/nav') %>
+    <main class="content">
+      <%- body %>
+    </main>
+  </div>
   <footer>
     <%- partial('_partial/footer') %>
   </footer>

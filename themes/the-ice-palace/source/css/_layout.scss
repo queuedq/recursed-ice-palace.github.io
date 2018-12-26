@@ -1,0 +1,13 @@
+@import 'mixins';
+
+.container {
+  width: 66.67%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content {
+  width: 100%;
+  padding: 40px;
+  background: #eee;
+}
