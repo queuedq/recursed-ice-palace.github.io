@@ -2,10 +2,20 @@
   <ul class="nav--list">
     <% for (var menuItem in theme.menu){ %>
       <li class="nav--item">
-        <a class="nav--link" href="<%- url_for(theme.menu[menuItem]) %>">
+        <a class="nav--link" href="<%- url_for(theme.menu[menuItem].path) %>">
           <%= menuItem %>
         </a>
-        <img class="nav--image"/>
+        <% if (!is_current(theme.menu[menuItem].path)){ %>
+        <div
+          class="nav--image"
+          style="background-image: url('<%- url_for(theme.menu[menuItem].icon) %>')"
+        />
+        <% } else { %>
+        <div
+          class="nav--image --active"
+          style="background-image: url('<%- url_for('images/exit.png') %>')"
+        />
+        <% } %>
       </li>
     <% } %>
   </ul>
