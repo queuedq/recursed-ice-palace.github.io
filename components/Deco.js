@@ -1,4 +1,4 @@
-import { getTileSize } from '../config';
+import { getTileSize, getBackgroundSize } from '../config';
 
 export default () => (
   <>
@@ -12,7 +12,7 @@ export default () => (
     <style jsx>{`
       :global(body) {
         background-image: url("/static/background.png");
-        background-size: ${getTileSize(3)} ${getTileSize(3)};
+        background-size: ${getBackgroundSize()} ${getBackgroundSize()};
         background-position: center;
         background-repeat: repeat;
       }
