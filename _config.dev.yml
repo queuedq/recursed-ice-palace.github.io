@@ -1,4 +1,0 @@
-# SCSS
-node_sass:
-  sourceMap: true
-  sourceMapEmbed: true
