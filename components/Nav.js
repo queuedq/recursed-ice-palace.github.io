@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { menus, getChestSize } from '../config'
+import { menus, getChestSize, palette } from '../config'
 
 // function randomInt(max) {
 //   return Math.floor(Math.random() * Math.floor(max));
@@ -26,6 +26,10 @@ const menuItem = currentPage => ([menuName, { path, icon }]) => (
         text-decoration: none;
         font-size: 24px;
         text-align: center;
+        color: ${palette.ice.lightest};
+      }
+      a:hover {
+        color: ${palette.ice.light};
       }
       .menuIcon {
         display: block;

@@ -46,3 +46,15 @@ export const menus = {
 }
 
 export const googleAnalytics = null
+
+export const palette = {
+  ice: {
+    lightest: '#dbf5ff',
+    lighter: '#aee7ff',
+    light: '#50cfff',
+    base: '#43a3fa',
+    shaded: '#4195fc',
+    dark: '#0586fa',
+    darker: '#266af2',
+  }
+}

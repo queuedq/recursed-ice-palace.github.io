@@ -1,6 +1,6 @@
 import chroma from 'chroma-js'
 import Head from 'next/head'
-import { getTileSize, title, TILE_SIZE } from '../config'
+import { getTileSize, title, TILE_SIZE, palette } from '../config'
 import Deco from '../components/Deco'
 import Logo from '../components/Logo'
 import Nav from '../components/Nav'
@@ -64,7 +64,7 @@ export default ({ currentPage, children }) => (
         width: 100%;
         padding: ${getTileSize()};
         color: rgba(0, 0, 0, 0.7);
-        background-color: #b6ebff;
+        background-color: ${palette.ice.lighter};
         border: ${getTileSize()} solid;
         border-image: url("/static/content_box.png") ${TILE_SIZE};
         border-image-repeat: repeat;
