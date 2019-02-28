@@ -45,6 +45,9 @@ export default ({ currentPage, children }) => (
         min-height: 100%;
         font-size: 16px;
         font-family: Fixedsys;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        -webkit-text-size-adjust: auto;
       }
       * {
         box-sizing: border-box;
@@ -53,7 +56,7 @@ export default ({ currentPage, children }) => (
     `}</style>
     <style jsx>{`
       .container {
-        width: 66.67%;
+        width: 600px;
         max-width: 800px;
         margin: 0 auto;
       }
