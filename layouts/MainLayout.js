@@ -43,7 +43,7 @@ export default ({ currentPage, children }) => (
       body {
         position: relative;  // For deco column positioning
         min-height: 100%;
-        font-size: 16px;
+        font-size: 24px;
         font-family: Fixedsys;
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
