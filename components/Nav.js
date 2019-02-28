@@ -8,7 +8,7 @@ import { menus, getChestSize } from '../config'
 // const randomChest = () => `/static/open_0${randomInt(5) + 1}.png`
 
 const menuItem = currentPage => ([menuName, { path, icon }]) => (
-  <li>
+  <li key={menuName}>
     <Link href={path}>
       <a>{menuName}</a>
     </Link>
