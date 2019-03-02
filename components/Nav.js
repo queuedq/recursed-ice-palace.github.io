@@ -61,6 +61,12 @@ export default ({ currentPage }) => (
       ul {
         display: flex;
         justify-content: space-around;
+        margin: 0 auto;
+      }
+      @media screen and (max-width: 750px) {
+        ul {
+          width: 500px;
+        }
       }
     `}</style>
   </nav>

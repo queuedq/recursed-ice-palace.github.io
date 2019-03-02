@@ -34,11 +34,12 @@ export default () => (
         position: absolute;
         width: ${getTileSize(3)};
         height: 100%;
-        background-size: contain;
+        background-size: ${getTileSize(3)} ${getTileSize(1)};
         background-repeat: repeat-y;
         z-index: -1;
       }
       .column.left {
+        background-position: right;
         background-image: url("/static/column_left.png");
       }
       .column.right {
@@ -50,15 +51,24 @@ export default () => (
         width: ${getTileSize(4)};
         height: ${getTileSize()};
         top: ${getTileSize()};
-        background-size: cover;
+        background-size: ${getTileSize(4)} ${getTileSize(1)};
         z-index: -1;
       }
       .head.left {
+        background-position: right;
         background-image: url("/static/column_head_left.png");
       }
       .head.right {
         right: 0;
         background-image: url("/static/column_head_right.png");
+      }
+      @media screen and (max-width: 1000px) {
+        .column {
+          width: ${getTileSize(2)};
+        }
+        .head {
+          width: ${getTileSize(3)};
+        }
       }
     `}</style>
   </>

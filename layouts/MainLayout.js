@@ -24,8 +24,8 @@ export default ({ currentPage, children }) => (
       <link rel="icon" href="/static/favicon.ico" />
     </Head>
     <Deco />
+    <Logo />
     <div className="container">
-      <Logo />
       <Nav currentPage={currentPage} />
       <main className="content">
         {children}
@@ -56,7 +56,7 @@ export default ({ currentPage, children }) => (
     `}</style>
     <style jsx>{`
       .container {
-        width: 600px;
+        width: calc(100% - 400px);
         max-width: 800px;
         margin: 0 auto;
       }
@@ -68,6 +68,19 @@ export default ({ currentPage, children }) => (
         border: ${getTileSize()} solid;
         border-image: url("/static/content_box.png") ${TILE_SIZE};
         border-image-repeat: repeat;
+      }
+      @media screen and (max-width: 1000px) {
+        .container {
+          width: calc(100% - 240px);
+        }
+      }
+      @media screen and (max-width: 750px) {
+        .container {
+          width: 100%;
+        }
+        .content {
+          border-image-width: ${getTileSize()} 0;
+        }
       }
     `}</style>
   </div>
