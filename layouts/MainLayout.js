@@ -63,7 +63,7 @@ export default ({ currentPage, children }) => (
       .content {
         width: 100%;
         padding: ${getTileSize()};
-        color: rgba(0, 0, 0, 0.7);
+        color: ${palette.black};
         background-color: ${palette.ice.lighter};
         border: ${getTileSize()} solid;
         border-image: url("/static/content_box.png") ${TILE_SIZE};

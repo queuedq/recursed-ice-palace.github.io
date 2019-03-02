@@ -48,6 +48,8 @@ export const menus = {
 export const googleAnalytics = null
 
 export const palette = {
+  white: '#eefaff',
+  black: '#003d6d',
   ice: {
     lightest: '#dbf5ff',
     lighter: '#aee7ff',
@@ -56,5 +58,5 @@ export const palette = {
     shaded: '#4195fc',
     dark: '#0586fa',
     darker: '#266af2',
-  }
+  },
 }
