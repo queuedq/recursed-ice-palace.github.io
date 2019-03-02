@@ -58,4 +58,11 @@ export const palette = {
     dark: '#0586fa',
     darker: '#266af2',
   },
+  red: '#fc057a',
+}
+
+export const breakpoints = {
+  tablet: 820,
+  tabletMinor: 900,
+  desktop: 1100,
 }

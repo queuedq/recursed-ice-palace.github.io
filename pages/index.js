@@ -1,7 +1,8 @@
 import MainLayout from '../layouts/MainLayout'
+import Home from '../contents/Home.mdx';
 
 export default () => (
   <MainLayout currentPage='Home'>
-    <p>Hello Next.js</p>
+    <Home />
   </MainLayout>
 )

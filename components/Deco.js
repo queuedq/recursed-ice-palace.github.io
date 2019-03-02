@@ -1,4 +1,4 @@
-import { getTileSize, getBackgroundSize } from '../config';
+import { getTileSize, getBackgroundSize, breakpoints } from '../config';
 
 export default () => (
   <>
@@ -62,7 +62,7 @@ export default () => (
         right: 0;
         background-image: url("/static/column_head_right.png");
       }
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: ${breakpoints.desktop}px) {
         .column {
           width: ${getTileSize(2)};
         }

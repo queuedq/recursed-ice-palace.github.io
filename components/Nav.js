@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { menus, getChestSize, palette } from '../config'
+import { menus, getChestSize, palette, breakpoints } from '../config'
 
 // function randomInt(max) {
 //   return Math.floor(Math.random() * Math.floor(max));
@@ -63,7 +63,7 @@ export default ({ currentPage }) => (
         justify-content: space-around;
         margin: 0 auto;
       }
-      @media screen and (max-width: 750px) {
+      @media screen and (max-width: ${breakpoints.tablet}px) {
         ul {
           width: 500px;
         }

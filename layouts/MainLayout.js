@@ -1,9 +1,9 @@
-import chroma from 'chroma-js'
 import Head from 'next/head'
-import { getTileSize, title, TILE_SIZE, palette } from '../config'
+import { title, breakpoints } from '../config'
 import Deco from '../components/Deco'
 import Logo from '../components/Logo'
 import Nav from '../components/Nav'
+import ContentBox from '../components/ContentBox'
 import '../css/reset.css'
 import '../css/normalize.css'
 import '../js/googleAnalytics'
@@ -27,9 +27,9 @@ export default ({ currentPage, children }) => (
     <Logo />
     <div className="container">
       <Nav currentPage={currentPage} />
-      <main className="content">
+      <ContentBox>
         {children}
-      </main>
+      </ContentBox>
     </div>
     {/* <Footer /> */}
     <style global jsx>{`
@@ -43,8 +43,9 @@ export default ({ currentPage, children }) => (
       body {
         position: relative;  // For deco column positioning
         min-height: 100%;
-        font-size: 24px;
         font-family: Fixedsys;
+        font-size: 24px;
+        line-height: 32px;
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
         -webkit-text-size-adjust: auto;
@@ -60,26 +61,14 @@ export default ({ currentPage, children }) => (
         max-width: 800px;
         margin: 0 auto;
       }
-      .content {
-        width: 100%;
-        padding: ${getTileSize()};
-        color: ${palette.black};
-        background-color: ${palette.ice.lighter};
-        border: ${getTileSize()} solid;
-        border-image: url("/static/content_box.png") ${TILE_SIZE};
-        border-image-repeat: repeat;
-      }
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: ${breakpoints.desktop}px) {
         .container {
-          width: calc(100% - 240px);
+          width: calc(100% - 192px);
         }
       }
-      @media screen and (max-width: 750px) {
+      @media screen and (max-width: ${breakpoints.tablet}px) {
         .container {
           width: 100%;
-        }
-        .content {
-          border-image-width: ${getTileSize()} 0;
         }
       }
     `}</style>
