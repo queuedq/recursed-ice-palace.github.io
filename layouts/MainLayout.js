@@ -6,6 +6,7 @@ import Nav from '../components/Nav'
 import ContentBox from '../components/ContentBox'
 import '../css/reset.css'
 import '../css/normalize.css'
+import '../css/global.css'
 import '../js/googleAnalytics'
 
 const getTitle = currentPage =>
