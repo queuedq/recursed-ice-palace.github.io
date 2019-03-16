@@ -44,6 +44,7 @@ export default ({ currentPage, children }) => (
       body {
         position: relative;  // For deco column positioning
         min-height: 100%;
+        background-color: #365474;
         font-family: Fixedsys;
         font-size: 24px;
         line-height: 32px;
