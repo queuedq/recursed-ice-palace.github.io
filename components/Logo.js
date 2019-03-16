@@ -6,7 +6,7 @@ export default () => (
     <style jsx>{`
       .logo {
         display: block;
-        width: 610;
+        width: 610px;
         margin: 32px auto 48px auto;
       }
       @media screen and (max-width: ${breakpoints.tabletMinor}px) {
