@@ -1,7 +1,8 @@
 import MainLayout from '../layouts/MainLayout'
+import About from '../contents/About.mdx'
 
 export default () => (
   <MainLayout currentPage='About'>
-    <p>Hello Next.js</p>
+    <About />
   </MainLayout>
 )
