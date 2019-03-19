@@ -1,18 +1,15 @@
 export const TILE_SIZE = 16
-export const BACKGROUND_SIZE = 40
 export const CHEST_SIZE = 40
 
 export function getTileSize(numTiles = 1, scaling = 2, px = true) {
   return TILE_SIZE * scaling * numTiles + (px ? 'px' : '')
 }
 
-export function getBackgroundSize(scaling = 2, px = true) {
-  return BACKGROUND_SIZE * scaling + (px ? 'px' : '')
-}
-
 export function getChestSize(scaling = 2, px = true) {
   return CHEST_SIZE * scaling + (px ? 'px' : '')
 }
+
+export const backgroundSize = 80
 
 export const title = 'Recursed: The Ice Palace'
 export const description =
@@ -62,8 +59,8 @@ export const palette = {
 }
 
 export const breakpoints = {
-  bigMobile: 720,
+  mobileBig: 720,
   tablet: 820,
-  bigTablet: 900,
+  tabletBig: 900,
   desktop: 1100,
 }

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { title, breakpoints } from '../config'
+import { title, breakpoints, backgroundSize } from '../config'
 import Deco from '../components/Deco'
 import Logo from '../components/Logo'
 import Nav from '../components/Nav'
@@ -44,13 +44,17 @@ export default ({ currentPage, children }) => (
       body {
         position: relative;  // For deco column positioning
         min-height: 100%;
-        background-color: #365474;
         font-family: Fixedsys;
         font-size: 24px;
         line-height: 32px;
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
         -webkit-text-size-adjust: auto;
+        background-color: #365474;
+        background-image: url("/static/background.png");
+        background-size: ${backgroundSize}px ${backgroundSize}px;
+        background-position: center;
+        background-repeat: repeat;
       }
       * {
         box-sizing: border-box;
