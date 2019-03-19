@@ -1,4 +1,9 @@
-const withCSS = require('@zeit/next-css')
-const withMDX = require('@zeit/next-mdx')()
+const withPlugins = require('next-compose-plugins')
 
-module.exports = withMDX(withCSS())
+const css = require('@zeit/next-css')
+const mdx = require('@zeit/next-mdx')()
+
+module.exports = withPlugins([
+  [css],
+  [mdx]
+]);

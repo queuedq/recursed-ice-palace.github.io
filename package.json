@@ -17,6 +17,7 @@
     "@zeit/next-mdx": "^1.2.0",
     "chroma-js": "^2.0.3",
     "next": "^8.0.3",
+    "next-compose-plugins": "^2.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
