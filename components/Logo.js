@@ -6,13 +6,13 @@ export default () => (
     <style jsx>{`
       .logo {
         display: block;
-        width: 610px;
-        margin: 32px auto 48px auto;
+        width: 305px;
+        margin: 24px auto 32px auto;
       }
-      @media screen and (max-width: ${breakpoints.tabletMinor}px) {
+      @media screen and (min-width: ${breakpoints.bigTablet}px) {
         .logo {
-          width: 305px;
-          margin: 24px auto 32px auto;
+          width: 610px;
+          margin: 32px auto 48px auto;
         }
       }
     `}</style>

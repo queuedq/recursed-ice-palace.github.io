@@ -32,7 +32,7 @@ export default () => (
       }
       .column {
         position: absolute;
-        width: ${getTileSize(3)};
+        width: ${getTileSize(2)};
         height: 100%;
         background-size: ${getTileSize(3)} ${getTileSize(1)};
         background-repeat: repeat-y;
@@ -48,7 +48,7 @@ export default () => (
       }
       .head {
         position: absolute;
-        width: ${getTileSize(4)};
+        width: ${getTileSize(3)};
         height: ${getTileSize()};
         top: ${getTileSize()};
         background-size: ${getTileSize(4)} ${getTileSize(1)};
@@ -62,12 +62,12 @@ export default () => (
         right: 0;
         background-image: url("/static/column_head_right.png");
       }
-      @media screen and (max-width: ${breakpoints.desktop}px) {
+      @media screen and (min-width: ${breakpoints.desktop}px) {
         .column {
-          width: ${getTileSize(2)};
+          width: ${getTileSize(3)};
         }
         .head {
-          width: ${getTileSize(3)};
+          width: ${getTileSize(4)};
         }
       }
     `}</style>

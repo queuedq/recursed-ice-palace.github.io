@@ -62,7 +62,8 @@ export const palette = {
 }
 
 export const breakpoints = {
+  bigMobile: 720,
   tablet: 820,
-  tabletMinor: 900,
+  bigTablet: 900,
   desktop: 1100,
 }

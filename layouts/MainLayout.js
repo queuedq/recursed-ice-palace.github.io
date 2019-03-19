@@ -59,18 +59,17 @@ export default ({ currentPage, children }) => (
     `}</style>
     <style jsx>{`
       .container {
-        width: calc(100% - 400px);
         max-width: 800px;
         margin: 0 auto;
       }
-      @media screen and (max-width: ${breakpoints.desktop}px) {
+      @media screen and (min-width: ${breakpoints.desktop}px) {
         .container {
-          width: calc(100% - 192px);
+          width: calc(100% - 400px);
         }
       }
-      @media screen and (max-width: ${breakpoints.tablet}px) {
+      @media screen and (min-width: ${breakpoints.tablet}px) {
         .container {
-          width: 100%;
+          width: calc(100% - 192px);
         }
       }
     `}</style>
