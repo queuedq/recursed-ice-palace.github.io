@@ -48,16 +48,17 @@ export const googleAnalytics = null
 
 export const palette = {
   white: '#eefaff',
-  black: '#003d6d',
+  black: '#002C4F',
   ice: {
     lightest: '#dbf5ff',
     lighter: '#aee7ff',
     light: '#50cfff',
-    base: '#43a3fa',
+    base: '#43aafa',
     dark: '#0586fa',
-    darker: '#266af2',
+    darkest: '#005091',
   },
-  red: '#fc057a',
+  link: '#266af2',
+  emphasize: '#DE05FF',
 }
 
 export const breakpoints = {
