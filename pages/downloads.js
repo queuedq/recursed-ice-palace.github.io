@@ -1,5 +1,5 @@
 import MainLayout from '../layouts/MainLayout'
-import Downloads from '../content/Downloads'
+import Downloads from '../contents/Downloads.mdx'
 
 export default () => (
   <MainLayout currentPage='Downloads'>
