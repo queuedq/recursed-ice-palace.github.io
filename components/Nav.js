@@ -62,7 +62,11 @@ export default ({ currentPage }) => (
         display: flex;
         justify-content: space-around;
         margin: 0 auto;
-        width: 500px;
+      }
+      @media screen and (min-width: ${breakpoints.mobileBig}px) {
+        ul {
+          width: 540px;
+        }
       }
       @media screen and (min-width: ${breakpoints.tablet}px) {
         ul {
