@@ -75,13 +75,13 @@ export default ({ children }) => (
         margin: 16px 0;
         padding-left: 16px;
       }
-      .content li {
+      .content ul>li {
         position: relative;
         margin: 8px 0;
         padding-left: 40px;
         color: ${palette.ice.darkest}
       }
-      .content li::before {
+      .content ul>li::before {
         content: '';
         width: 32px;
         height: 32px;
