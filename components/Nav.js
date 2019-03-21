@@ -32,7 +32,7 @@ const menuItem = currentPage => ([menuName, { path, icon }]) => (
         display: block;
         width: ${getChestSize()};
         height: ${getChestSize()};
-        margin: -10px auto 0 auto;
+        margin: 0 auto;
         background-image: url("${icon}");
         background-size: contain;
         background-position: center bottom;

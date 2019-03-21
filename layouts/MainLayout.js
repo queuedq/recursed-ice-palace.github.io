@@ -57,7 +57,7 @@ export default ({ currentPage, children }) => (
       }
       * {
         box-sizing: border-box;
-        image-rendering: pixelated;
+
       }
     `}</style>
     <style jsx>{`

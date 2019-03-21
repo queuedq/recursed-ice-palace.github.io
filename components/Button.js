@@ -1,5 +1,5 @@
 import chroma from 'chroma-js';
-import { getTileSize, TILE_SIZE, palette } from '../config';
+import { getTileSize, palette } from '../config';
 
 export default ({ children, centered }) => (
   <button>
@@ -26,21 +26,21 @@ export default ({ children, centered }) => (
         right: 0;
         z-index: -1;
         border: ${getTileSize()} solid;
-        border-image: url("/static/buoy.png") ${TILE_SIZE};
+        border-image: url("/static/buoy.png") 64;
         border-image-repeat: repeat;
       }
       button:hover {
         color: ${chroma(palette.ice.base).darken(1).hex()};
       }
       button:hover::before {
-        border-image: url("/static/buoy_hover.png") ${TILE_SIZE};
+        border-image: url("/static/buoy_hover.png") 64;
       }
       button:active {
         color: ${chroma(palette.ice.base).darken(2).hex()};
         text-shadow: none;
       }
       button:active::before {
-        border-image: url("/static/buoy_active.png") ${TILE_SIZE};
+        border-image: url("/static/buoy_active.png") 64;
       }
       button:focus {
         outline: 4px solid ${palette.ice.dark};

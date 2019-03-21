@@ -1,4 +1,4 @@
-import { palette, getTileSize, TILE_SIZE, breakpoints } from '../config';
+import { palette, getTileSize, breakpoints } from '../config';
 
 export default ({ children }) => (
   <main className="content">
@@ -23,6 +23,7 @@ export default ({ children }) => (
           display: block;
           height: ${getTileSize()};
           background-image: url("/static/horizontal.png");
+          background-size: ${getTileSize()};
           background-repeat: repeat-x;
         }
         .content::before {
@@ -35,7 +36,7 @@ export default ({ children }) => (
       @media screen and (min-width: ${breakpoints.mobileBig}px) {
         .content {
           border: ${getTileSize()} solid;
-          border-image: url("/static/content_box.png") ${TILE_SIZE};
+          border-image: url("/static/content_box.png") 64;
           border-image-repeat: repeat;
         }
       }
@@ -59,7 +60,10 @@ export default ({ children }) => (
         margin-bottom: 16px;
       }
       .content a {
-        background: url('/static/link_icon.png') no-repeat left bottom;
+        background-image: url('/static/link_icon.png');
+        background-repeat: no-repeat;
+        background-size: 32px;
+        background-position: left bottom;
         padding-left: 36px;
         color: ${palette.link};
       }

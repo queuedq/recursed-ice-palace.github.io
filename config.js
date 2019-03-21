@@ -1,5 +1,5 @@
 export const TILE_SIZE = 16
-export const CHEST_SIZE = 40
+export const CHEST_SIZE = 32
 
 export function getTileSize(numTiles = 1, scaling = 2, px = true) {
   return TILE_SIZE * scaling * numTiles + (px ? 'px' : '')

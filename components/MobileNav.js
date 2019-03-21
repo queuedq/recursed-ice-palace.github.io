@@ -1,13 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import classNames from 'classnames'
-import { menus, getChestSize, palette, breakpoints, getTileSize } from '../config'
-
-// function randomInt(max) {
-//   return Math.floor(Math.random() * Math.floor(max));
-// }
-
-// const randomChest = () => `/static/open_0${randomInt(5) + 1}.png`
+import { menus, getChestSize, palette, getTileSize } from '../config'
 
 // 1. Single menu item
 
@@ -28,10 +22,12 @@ const menuItem = currentPage => ([menuName, { path, icon }]) => (
         width: 40px;
         height: 40px;
         background-image: url("${icon}");
+        background-size: 40px;
         background-position: center -8px;
         background-repeat: no-repeat;
       }
       a {
+        padding: 0 16px;
         text-decoration: none;
         font-size: 24px;
         color: ${palette.black};
@@ -114,6 +110,7 @@ export default ({ currentPage }) => {
           width: 100%;
           height: ${getTileSize()};
           background-image: url("/static/horizontal.png");
+          background-size: ${getTileSize()};
           background-repeat: repeat-x;
         }
         .is-collapsed {
