@@ -1,11 +1,8 @@
 import Link from 'next/link'
 import { menus, getChestSize, palette, breakpoints } from '../config'
+import MobileNav from './MobileNav';
 
-// function randomInt(max) {
-//   return Math.floor(Math.random() * Math.floor(max));
-// }
-
-// const randomChest = () => `/static/open_0${randomInt(5) + 1}.png`
+// 1. Single menu item
 
 const menuItem = currentPage => ([menuName, { path, icon }]) => (
   <li key={menuName}>
@@ -13,8 +10,8 @@ const menuItem = currentPage => ([menuName, { path, icon }]) => (
       <a>{menuName}</a>
     </Link>
     {currentPage === menuName
-      ? <div className="menuIcon active" />
-      : <div className="menuIcon"/>
+      ? <div className="menu-icon active" />
+      : <div className="menu-icon"/>
     }
     <style jsx>{`
       li {
@@ -31,7 +28,7 @@ const menuItem = currentPage => ([menuName, { path, icon }]) => (
       a:hover {
         color: ${palette.ice.light};
       }
-      .menuIcon {
+      .menu-icon {
         display: block;
         width: ${getChestSize()};
         height: ${getChestSize()};
@@ -41,15 +38,20 @@ const menuItem = currentPage => ([menuName, { path, icon }]) => (
         background-position: center bottom;
         background-repeat: no-repeat;
       }
-      .menuIcon.active {
+      .menu-icon.active {
         background-image: url('/static/exit.png');
       }
     `}</style>
   </li>
 )
 
+// 2. Composed nav
+
 export default ({ currentPage }) => (
   <nav>
+    <div className="mobile-wrapper">
+      <MobileNav />
+    </div>
     <ul>
       {Object.entries(menus).map(menuItem(currentPage))}
     </ul>
@@ -61,7 +63,19 @@ export default ({ currentPage }) => (
       ul {
         display: flex;
         justify-content: space-around;
+        width: 100%;
         margin: 0 auto;
+      }
+      .mobile-wrapper {
+        display: none;
+      }
+      @media screen and (max-width: ${breakpoints.mobile - 1}px) {
+        ul {
+          display: none;
+        }
+        .mobile-wrapper {
+          display: block;
+        }
       }
       @media screen and (min-width: ${breakpoints.mobileBig}px) {
         ul {
