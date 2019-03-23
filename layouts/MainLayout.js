@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { title, breakpoints, backgroundSize } from '../config'
+import { title, breakpoints, backgroundSize, palette } from '../config'
 import Deco from '../components/Deco'
 import Logo from '../components/Logo'
 import Nav from '../components/Nav'
@@ -58,8 +58,11 @@ export default ({ currentPage, children }) => (
       * {
         box-sizing: border-box;
       }
-      *:focus {
+      :focus {
         outline: 4px solid #43aafa;
+      }
+      ::selection {
+        background: ${palette.ice.light};
       }
     `}</style>
     <style jsx>{`
