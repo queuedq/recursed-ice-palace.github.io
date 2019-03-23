@@ -75,7 +75,6 @@ export default ({ children }) => (
         color: ${palette.emphasize};
       }
       .content ul {
-        text-align: left;
         margin: 16px 0;
         padding-left: 16px;
       }
@@ -83,7 +82,6 @@ export default ({ children }) => (
         position: relative;
         margin: 8px 0;
         padding-left: 40px;
-        color: ${palette.ice.darkest}
       }
       .content ul>li::before {
         content: '';
@@ -95,6 +93,24 @@ export default ({ children }) => (
         background-position: center;
         left: 0;
         top: 0;
+      }
+      .content ol {
+        margin: 16px 0;
+        padding-left: 16px;
+        counter-reset: order;
+      }
+      .content ol>li {
+        position: relative;
+        margin: 8px 0;
+        padding-left: 40px;
+      }
+      .content ol>li::before {
+        counter-increment: order;
+        content: counter(order) '.';
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: ${palette.ice.dark};
       }
     `}</style>
   </main>
