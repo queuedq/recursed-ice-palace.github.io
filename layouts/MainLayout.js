@@ -57,7 +57,9 @@ export default ({ currentPage, children }) => (
       }
       * {
         box-sizing: border-box;
-
+      }
+      *:focus {
+        outline: 4px solid #43aafa;
       }
     `}</style>
     <style jsx>{`
