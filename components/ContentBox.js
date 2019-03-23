@@ -14,6 +14,7 @@ export default ({ children }) => (
       @media screen and (max-width: ${breakpoints.mobileBig - 1}px) {
         .content {
           padding: ${getTileSize(2)} 16px;
+          word-wrap: break-word;
         }
         .content::before, .content::after {
           content: '';
