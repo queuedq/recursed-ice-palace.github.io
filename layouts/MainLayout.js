@@ -59,7 +59,7 @@ export default ({ currentPage, children }) => (
         box-sizing: border-box;
       }
       :focus {
-        outline: 4px solid #43aafa;
+        outline: 4px solid ${palette.ice.base};
       }
       ::selection {
         background: ${palette.ice.light};
