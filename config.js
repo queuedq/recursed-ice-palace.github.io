@@ -29,18 +29,18 @@ export const menus = {
     icon: '/static/open_05.png',
     secondaryIcon: '/static/closed_05.png',
   },
-  News: {
-    path: '/news/',
+  FAQ: {
+    path: '/faq/',
     icon: '/static/open_01.png',
     secondaryIcon: '/static/closed_01.png',
   },
-  FAQ: {
-    path: '/faq/',
+  Downloads: {
+    path: '/downloads/',
     icon: '/static/open_02.png',
     secondaryIcon: '/static/closed_02.png',
   },
-  Downloads: {
-    path: '/downloads/',
+  Forum: {
+    path: '/forum/',
     icon: '/static/open_04.png',
     secondaryIcon: '/static/closed_04.png',
   },
