@@ -22,22 +22,27 @@ export const menus = {
   Home: {
     path: '/',
     icon: '/static/open_03.png',
+    secondaryIcon: '/static/closed_03.png',
   },
   About: {
     path: '/about/',
     icon: '/static/open_05.png',
+    secondaryIcon: '/static/closed_05.png',
   },
   News: {
     path: '/news/',
     icon: '/static/open_01.png',
+    secondaryIcon: '/static/closed_01.png',
   },
   FAQ: {
     path: '/faq/',
     icon: '/static/open_02.png',
+    secondaryIcon: '/static/closed_02.png',
   },
   Downloads: {
     path: '/downloads/',
     icon: '/static/open_04.png',
+    secondaryIcon: '/static/closed_04.png',
   },
 }
 

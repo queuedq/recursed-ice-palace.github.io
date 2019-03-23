@@ -1,48 +1,66 @@
 import Link from 'next/link'
+import classNames from 'classnames'
 import { menus, getChestSize, palette, breakpoints } from '../config'
 import MobileNav from './MobileNav';
 
 // 1. Single menu item
 
-const menuItem = currentPage => ([menuName, { path, icon }]) => (
-  <li key={menuName}>
-    <Link href={path}>
-      <a>{menuName}</a>
-    </Link>
-    {currentPage === menuName
-      ? <div className="menu-icon active" />
-      : <div className="menu-icon"/>
-    }
-    <style jsx>{`
-      li {
-        display: block;
-        width: 140px;
-      }
-      a {
-        display: block;
-        text-decoration: none;
-        font-size: 24px;
-        text-align: center;
-        color: ${palette.ice.lightest};
-      }
-      a:hover {
-        color: ${palette.ice.light};
-      }
-      .menu-icon {
-        display: block;
-        width: ${getChestSize()};
-        height: ${getChestSize()};
-        margin: 0 auto;
-        background-image: url("${icon}");
-        background-size: contain;
-        background-position: center bottom;
-        background-repeat: no-repeat;
-      }
-      .menu-icon.active {
-        background-image: url('/static/exit.png');
-      }
-    `}</style>
-  </li>
+const menuItem = currentPage => ([menuName, { path, icon, secondaryIcon }]) => (
+  <Link href={path}>
+    <li
+      key={menuName}
+      className={classNames({ "active": currentPage === menuName })}
+    >
+      <div>
+        <Link href={path}>
+          <a>
+            {menuName}
+          </a>
+        </Link>
+      </div>
+      <div className="menu-icon" />
+
+      <style jsx>{`
+        li {
+          display: block;
+          width: 120px;
+          cursor: pointer;
+        }
+        li > div {
+          text-align: center;
+        }
+        a {
+          padding: 0 2px;
+          text-decoration: none;
+          font-size: 24px;
+          color: ${palette.ice.lightest};
+        }
+        li:not(.active):hover a {
+          color: ${palette.ice.light};
+        }
+        a:focus {
+          outline: 4px solid ${palette.ice.dark};
+        }
+        .menu-icon {
+          display: block;
+          width: ${getChestSize()};
+          height: ${getChestSize()};
+          margin: 0 auto;
+          background-image: url("${icon}");
+          background-size: contain;
+          background-position: center bottom;
+          background-repeat: no-repeat;
+        }
+        .active a {
+          color: ${palette.ice.darkest};
+          background: ${palette.ice.lighter};
+        }
+        .active .menu-icon {
+          background-image: url("${secondaryIcon}");
+        }
+      `}</style>
+    </li>
+  </Link>
 )
 
 // 2. Composed nav
@@ -79,7 +97,7 @@ export default ({ currentPage }) => (
       }
       @media screen and (min-width: ${breakpoints.mobileBig}px) {
         ul {
-          width: 540px;
+          width: calc(100% - 144px);
         }
       }
       @media screen and (min-width: ${breakpoints.tablet}px) {
