@@ -11,9 +11,9 @@ module.exports = withPlugins([
     return {
       '/': { page: '/' },
       '/about': { page: '/about'},
-      '/news': { page: '/news'},
       '/faq': { page: '/faq'},
-      '/downloads': { page: '/downloads'}
+      '/downloads': { page: '/downloads'},
+      '/forum': { page: '/forum'},
     }
   }
 });
