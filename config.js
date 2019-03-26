@@ -46,6 +46,15 @@ export const menus = {
   },
 }
 
+export const screenshots = [
+  '/static/screenshots/01.png',
+  '/static/screenshots/02.png',
+  '/static/screenshots/03.png',
+  '/static/screenshots/04.png',
+  '/static/screenshots/05.png',
+  '/static/screenshots/06.png'
+]
+
 export const googleAnalytics = null
 
 export const palette = {
