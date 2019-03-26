@@ -4,6 +4,7 @@ import Deco from '../components/Deco'
 import Logo from '../components/Logo'
 import Nav from '../components/Nav'
 import ContentBox from '../components/ContentBox'
+import Footer from '../components/Footer';
 import '../css/reset.css'
 import '../css/normalize.css'
 import '../css/global.css'
@@ -31,7 +32,7 @@ export default ({ currentPage, children }) => (
         {children}
       </ContentBox>
     </div>
-    {/* <Footer /> */}
+    <Footer />
     <style global jsx>{`
       @font-face {
         font-family: Fixedsys;

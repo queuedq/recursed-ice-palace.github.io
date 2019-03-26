@@ -8,6 +8,7 @@ export default ({ children }) => (
         position: relative;
         width: 100%;
         padding: ${getTileSize()};
+        margin-bottom: ${getTileSize(3)};
         color: ${palette.ice.darkest};
         background-color: ${palette.ice.lighter};
       }
