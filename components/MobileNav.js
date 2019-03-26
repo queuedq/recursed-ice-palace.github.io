@@ -39,7 +39,8 @@ const menuItem = currentPage => ([menuName, { path, icon, secondaryIcon }]) => (
         background-image: url("${secondaryIcon}");
       }
       .active a {
-        background-color: ${palette.ice.base};
+        color: ${palette.ice.dark};
+        background-color: ${palette.ice.lighter};
       }
     `}</style>
   </li>
@@ -56,7 +57,7 @@ const expandButton = ({ onClick, isCollapsed }) => (
         display: flex;
         align-items: flex-end;
         padding: 0;
-        margin: 0 0 0 auto;
+        margin: 0 4px 0 auto;
         height: 40px;
         background: none;
         font-size: 24px;
@@ -74,7 +75,7 @@ const expandButton = ({ onClick, isCollapsed }) => (
         background-position: center bottom;
         background-repeat: no-repeat;
       }
-      .is-collpased .menu-icon {
+      .is-collapsed .menu-icon {
         background-image: url('/static/open_01.png');
       }
       button:hover {
@@ -117,8 +118,7 @@ export default ({ currentPage }) => {
           background-repeat: repeat-x;
         }
         .is-collapsed {
-          height: 0;
-          transition: height 0.5s;
+          display: none;
         }
       `}</style>
     </nav>
