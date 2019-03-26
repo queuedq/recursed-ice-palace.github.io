@@ -5,7 +5,7 @@ import { menus, getChestSize, palette, getTileSize } from '../config'
 
 // 1. Single menu item
 
-const menuItem = currentPage => ([menuName, { path, icon }]) => (
+const menuItem = currentPage => ([menuName, { path, icon, secondaryIcon }]) => (
   <li key={menuName} className={classNames({ active: currentPage === menuName })}>
     <div className="menu-icon"/>
     <Link href={path}>
@@ -35,8 +35,11 @@ const menuItem = currentPage => ([menuName, { path, icon }]) => (
       a:hover {
         color: ${palette.ice.darkest};
       }
-      .menu-icon.active {
-        background-image: url('/static/exit.png');
+      .active .menu-icon {
+        background-image: url("${secondaryIcon}");
+      }
+      .active a {
+        background-color: ${palette.ice.base};
       }
     `}</style>
   </li>
@@ -44,8 +47,8 @@ const menuItem = currentPage => ([menuName, { path, icon }]) => (
 
 // 2. Hamburger button
 
-const expandButton = ({ onClick }) => (
-  <button onClick={onClick}>
+const expandButton = ({ onClick, isCollapsed }) => (
+  <button onClick={onClick} className={classNames({ 'is-collapsed': isCollapsed })}>
     <div className="button-text">Menu</div>
     <div className="menu-icon"></div>
     <style jsx>{`
@@ -71,8 +74,8 @@ const expandButton = ({ onClick }) => (
         background-position: center bottom;
         background-repeat: no-repeat;
       }
-      .menu-icon.active {
-        background-image: url('/static/exit.png');
+      .is-collpased .menu-icon {
+        background-image: url('/static/open_01.png');
       }
       button:hover {
         color: ${palette.ice.light};
@@ -90,7 +93,7 @@ export default ({ currentPage }) => {
 
   return (
     <nav>
-      {expandButton({ onClick: toggleMenu })}
+      {expandButton({ onClick: toggleMenu, isCollapsed })}
       <ul className={classNames({ "is-collapsed": isCollapsed })}>
         {Object.entries(menus).map(menuItem(currentPage))}
       </ul>

@@ -6,7 +6,7 @@ import MobileNav from './MobileNav';
 // 1. Single menu item
 
 const menuItem = currentPage => ([menuName, { path, icon, secondaryIcon }]) => (
-  <Link href={path}>
+  <Link key={menuName} href={path}>
     <li
       key={menuName}
       className={classNames({ "active": currentPage === menuName })}
@@ -68,7 +68,7 @@ const menuItem = currentPage => ([menuName, { path, icon, secondaryIcon }]) => (
 export default ({ currentPage }) => (
   <nav>
     <div className="mobile-wrapper">
-      <MobileNav />
+      <MobileNav currentPage={currentPage} />
     </div>
     <ul>
       {Object.entries(menus).map(menuItem(currentPage))}

@@ -15,7 +15,7 @@ export default class SimpleSlider extends Component {
       <div className="carousel">
         <Slider {...settings}>
           {screenshots.map(src => (
-            <div className="image-container">
+            <div key={src} className="image-container">
               <img src={src} width="960" height="720"></img>
             </div>
           ))}
