@@ -18,10 +18,13 @@ const getTitle = currentPage =>
 export default ({ currentPage, children }) => (
   <div>
     <Head>
-      <meta charset="utf-8" />
+      <meta charSet="utf-8" />
       <title>{getTitle(currentPage)}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-      {/* TODO: OpenGraph */}
+      <meta property="og:title" content="Recursed: The Ice Palace" />
+      <meta property="og:description" content="Recursed: The Ice Palace is a free community DLC for the puzzle game Recursed, filled with carefully crafted and extremely challenging puzzles." />
+      <meta property="og:image" content="https://recursed-ice-palace.github.io/static/screenshots/01.png" />
+      <meta property="og:url" content="https://recursed-ice-palace.github.io/" />
       <link rel="icon" href="/static/favicon.ico" />
     </Head>
     <Deco />
