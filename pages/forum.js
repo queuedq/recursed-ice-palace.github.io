@@ -1,7 +1,11 @@
 import MainLayout from '../layouts/MainLayout'
+import Markdown from '../components/Markdown'
+import Forum from '../contents/Forum.mdx'
 
 export default () => (
   <MainLayout currentPage='Forum'>
-    <p>Coming Soon!</p>
+    <Markdown>
+      <Forum />
+    </Markdown>
   </MainLayout>
 )
