@@ -1,5 +1,5 @@
 {
-  "name": "recursed-ice-palace.github.io",
+  "name": "the-ice-palace.github.io",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "",
-  "homepage": "http://recursed-ice-palace.github.io",
+  "homepage": "http://the-ice-palace.github.io",
   "license": "ISC",
   "dependencies": {
     "@mdx-js/loader": "^0.20.0",
