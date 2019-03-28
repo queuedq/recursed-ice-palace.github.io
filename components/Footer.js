@@ -8,7 +8,7 @@ export default () => (
       <p><span>
         Contact:
         {' '}
-        <a href="mailto:choongmyoung@gmail.com">choongmyoung</a>
+        <a href="mailto:choongmyoung@naver.com">choongmyoung</a>
         ,
         {' '}
         <a href="mailto:queued37@gmail.com">QueuED</a>
