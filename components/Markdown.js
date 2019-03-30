@@ -24,7 +24,7 @@ export default ({ children }) => (
         color: ${palette.ice.darkest};
         margin-bottom: 16px;
       }
-      .markdown a {
+      .markdown a:not(.image-link) {
         background-image: url('/static/link_icon.png');
         background-repeat: no-repeat;
         background-size: 32px;
