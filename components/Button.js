@@ -1,6 +1,6 @@
 import chroma from 'chroma-js'
 import classNames from 'classnames'
-import { getTileSize, palette } from '../config'
+import { getTileSize, palette, breakpoints } from '../config'
 
 export default ({ children, centered, onClick }) => (
   <button
@@ -19,6 +19,11 @@ export default ({ children, centered, onClick }) => (
         font-size: 32px;
         text-transform: uppercase;
         z-index: 0;
+      }
+      @media screen and (max-width: ${breakpoints.mobileSmall}px) {
+        button {
+          font-size: 28px;
+        }
       }
       button.centered {
         display: block;
