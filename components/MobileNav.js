@@ -6,44 +6,47 @@ import { menus, getChestSize, palette, getTileSize } from '../config'
 // 1. Single menu item
 
 const menuItem = currentPage => ([menuName, { path, icon, secondaryIcon }]) => (
-  <li key={menuName} className={classNames({ active: currentPage === menuName })}>
-    <div className="menu-icon"/>
-    <Link href={path}>
+  <Link key={menuName} href={path}>
+    <li className={classNames({ active: currentPage === menuName })}>
+      <div className="menu-icon"/>
       <a>{menuName}</a>
-    </Link>
-    <style jsx>{`
-      li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 8px auto;
-      }
-      .menu-icon {
-        width: 40px;
-        height: 40px;
-        background-image: url("${icon}");
-        background-size: 40px;
-        background-position: center -8px;
-        background-repeat: no-repeat;
-      }
-      a {
-        padding: 0 16px;
-        text-decoration: none;
-        font-size: 24px;
-        color: ${palette.black};
-      }
-      a:hover {
-        color: ${palette.ice.darkest};
-      }
-      .active .menu-icon {
-        background-image: url("${secondaryIcon}");
-      }
-      .active a {
-        color: ${palette.ice.dark};
-        background-color: ${palette.ice.lighter};
-      }
-    `}</style>
-  </li>
+      <style jsx>{`
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 8px auto;
+        }
+        .menu-icon {
+          width: 40px;
+          height: 40px;
+          margin-right: 8px;
+          background-image: url("${icon}");
+          background-size: 40px;
+          background-position: center -8px;
+          background-repeat: no-repeat;
+        }
+        a {
+          padding: 0 16px;
+          text-decoration: none;
+          font-size: 24px;
+          min-width: 140px;
+          color: ${palette.black};
+          text-align: center;
+        }
+        li:not(.active):hover a {
+          background: ${palette.ice.base};
+        }
+        .active .menu-icon {
+          background-image: url("${secondaryIcon}");
+        }
+        .active a {
+          color: ${palette.ice.dark};
+          background-color: ${palette.ice.lighter};
+        }
+      `}</style>
+    </li>
+  </Link>
 )
 
 // 2. Hamburger button

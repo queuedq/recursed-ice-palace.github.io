@@ -71,6 +71,7 @@ export const palette = {
     light: '#6ed8ff',
     base: '#43aafa',
     dark: '#0586fa',
+    darker: '#0062ca',
     darkest: '#005091',
   },
   link: '#266af2',
