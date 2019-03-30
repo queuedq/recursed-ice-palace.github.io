@@ -1,5 +1,7 @@
+import Link from 'next/link'
 import Button from '../components/Button'
 import SubscriptionForm from '../components/SubscriptionForm'
+import { menus } from '../config'
 
 ## Welcome to The Ice Palace!
 
@@ -39,7 +41,9 @@ Keep in touch with us to be notified!
 
 # Download
 
-<Button centered>Download!</Button>
+<Link href={menus.Downloads.path}>
+  <Button centered>Download!</Button>
+</Link>
 
 <style jsx>{`
   img {

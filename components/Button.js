@@ -2,8 +2,11 @@ import chroma from 'chroma-js'
 import classNames from 'classnames'
 import { getTileSize, palette } from '../config'
 
-export default ({ children, centered }) => (
-  <button className={classNames({ centered })}>
+export default ({ children, centered, onClick }) => (
+  <button
+    className={classNames({ centered })}
+    onClick={onClick}
+  >
     {children}
     <style jsx>{`
       button {
