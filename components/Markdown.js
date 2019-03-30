@@ -35,9 +35,16 @@ export default ({ children }) => (
       .markdown a:hover {
         color: ${palette.ice.dark};
       }
-      .markdown em {
-        font-style: none;
+      .markdown strong {
+        font-weight: normal;
         color: ${palette.emphasize};
+      }
+      .markdown em {
+        background-image: linear-gradient(to right, ${palette.ice.light} 0%, ${palette.ice.light} 100%);
+        background-origin: 0;
+        background-position: 0 100%;
+        background-size: 100% 40%;
+        background-repeat: repeat-x;
       }
       .markdown ul, .markdown ol {
         margin: 16px 0;

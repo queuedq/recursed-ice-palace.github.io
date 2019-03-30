@@ -1,21 +1,9 @@
 import React from 'react'
 import { palette } from '../config';
 
-const parseSingleQuestion = ([question, shortAnswer, longAnswer], index) => (
-  <React.Fragment key={index}>
-    <dt>{question}</dt>
-    <dd>
-      <p className="short-answer">{shortAnswer}</p>
-      <p>{longAnswer}</p>
-    </dd>
-  </React.Fragment>
-)
-
-const parseQuestions = (questions) => questions.map(parseSingleQuestion)
-
-export default ({ contents }) => (
+export default ({ children }) => (
   <section className="qna">
-    {parseQuestions(contents)}
+    {children}
     <style jsx>{`
       .qna :global(dt) {
         position: relative;
@@ -30,8 +18,9 @@ export default ({ contents }) => (
         left: 0px;
         color: ${palette.ice.dark};
       }
-      .qna :global(dd) :global(.short-answer) {
+      .qna :global(dd) > :global(.short-answer) {
         position: relative;
+        margin-left: -32px;
         padding-left: 32px;
         color: ${palette.black};
       }
@@ -41,7 +30,7 @@ export default ({ contents }) => (
         left: 0px;
         color: ${palette.ice.dark};
       }
-      .qna :global(dd) :global(p) {
+      .qna :global(dd) {
         padding-left: 32px;
       }
     `}</style>
