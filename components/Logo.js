@@ -2,7 +2,7 @@ import { breakpoints } from '../config';
 
 export default () => (
   <header>
-    <img className="logo" src="/static/logo.png" />
+    <img className="logo" src="/static/logo.png" alt="Recursed: The Ice Palace"/>
     <style jsx>{`
       .logo {
         display: block;
