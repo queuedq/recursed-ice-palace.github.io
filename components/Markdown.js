@@ -80,6 +80,10 @@ export default ({ children }) => (
       .markdown ol ol, .markdown ol ul, .markdown ul ol, .markdown ul ul {
         padding-left: 0;
       }
+      .markdown ol ol > li::before {
+        counter-increment: order;
+        content: counter(order, lower-alpha) '.';
+      }
     `}</style>
   </div>
 )
