@@ -8,10 +8,7 @@ export default () => (
       <p><span>
         Contact:
         {' '}
-        <a href="mailto:choongmyoung@naver.com">choongmyoung</a>
-        ,
-        {' '}
-        <a href="mailto:queued37@gmail.com">QueuED</a>
+        <a href="mailto:RecursedIcePalace@gmail.com">RecursedIcePalace@gmail.com</a>
       </span></p>
     </div>
     <style jsx>{`
