@@ -1,21 +1,26 @@
-import chroma from 'chroma-js';
-import { getTileSize, palette } from '../config';
+import chroma from 'chroma-js'
+import classNames from 'classnames'
+import { getTileSize, palette } from '../config'
 
 export default ({ children, centered }) => (
-  <button>
+  <button className={classNames({ centered })}>
     {children}
     <style jsx>{`
       button {
         position: relative;
-        ${centered ? 'display: block; margin-left: auto; margin-right: auto;' : ''}
         height: ${getTileSize(2)};
-        padding-left: 32px;
-        padding-right: 32px;
+        padding 16px 32px;
+        margin: 8px;
         background: transparent;
         color: ${chroma(palette.ice.base).darken(1.5).hex()};
         font-size: 32px;
         text-transform: uppercase;
         z-index: 0;
+      }
+      button.centered {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
       }
       button::before {
         content: '';
