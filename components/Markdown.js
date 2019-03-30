@@ -39,11 +39,11 @@ export default ({ children }) => (
         font-style: none;
         color: ${palette.emphasize};
       }
-      .markdown ul {
+      .markdown ul, .markdown ol {
         margin: 16px 0;
-        padding-left: 16px;
+        padding-left: 8px;
       }
-      .markdown ul>li {
+      .markdown ul>li, .markdown ol>li {
         position: relative;
         margin: 8px 0;
         padding-left: 40px;
@@ -57,17 +57,10 @@ export default ({ children }) => (
         background-size: cover;
         background-position: center;
         left: 0;
-        top: 0;
+        top: -2px;
       }
       .markdown ol {
-        margin: 16px 0;
-        padding-left: 16px;
         counter-reset: order;
-      }
-      .markdown ol>li {
-        position: relative;
-        margin: 8px 0;
-        padding-left: 40px;
       }
       .markdown ol>li::before {
         counter-increment: order;
@@ -76,6 +69,9 @@ export default ({ children }) => (
         left: 0;
         top: 0;
         color: ${palette.ice.dark};
+      }
+      .markdown ol ol, .markdown ol ul, .markdown ul ol, .markdown ul ul {
+        padding-left: 0;
       }
     `}</style>
   </div>
