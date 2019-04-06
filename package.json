@@ -6,7 +6,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "deploy": "git subtree push --prefix out gh-pages master"
   },
   "keywords": [],
   "author": "",
