@@ -1,8 +1,9 @@
+import Link from 'next/link'
 import Button from '../../components/Button'
 
-const alertComingSoon = () => {
-  window.alert('Coming soon!')
-}
+// const alertComingSoon = () => {
+//   window.alert('Coming soon!')
+// }
 
 export default () => (
   <>
@@ -10,8 +11,12 @@ export default () => (
     <br />
     (Auto installation is Windows only.)
     <div style={{textAlign: 'center', margin: '24px 0 48px 0'}}>
-        <Button onClick={alertComingSoon}>Auto Install</Button>
-        <Button onClick={alertComingSoon}>Manual Install</Button>
+      <Link href="/static/downloads/TheIcePalace-Windows.zip">
+        <Button>Auto Install</Button>
+      </Link>
+      <Link href="/static/downloads/TheIcePalace-Manual.zip">
+        <Button>Manual Install</Button>
+      </Link>
     </div>
   </>
 )
