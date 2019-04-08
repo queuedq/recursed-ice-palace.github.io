@@ -795,11 +795,12 @@ var Form = function Form(_ref) {
 /*!*******************!*\
   !*** ./config.js ***!
   \*******************/
-/*! exports provided: TILE_SIZE, CHEST_SIZE, getTileSize, getChestSize, backgroundSize, title, description, keywords, author, menus, screenshots, googleAnalytics, palette, breakpoints */
+/*! exports provided: version, TILE_SIZE, CHEST_SIZE, getTileSize, getChestSize, backgroundSize, title, description, keywords, author, menus, screenshots, googleAnalytics, palette, breakpoints */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "version", function() { return version; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TILE_SIZE", function() { return TILE_SIZE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHEST_SIZE", function() { return CHEST_SIZE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getTileSize", function() { return getTileSize; });
@@ -814,6 +815,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "googleAnalytics", function() { return googleAnalytics; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "palette", function() { return palette; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "breakpoints", function() { return breakpoints; });
+var version = 'v1.0.0';
 var TILE_SIZE = 16;
 var CHEST_SIZE = 32;
 function getTileSize() {
@@ -908,7 +910,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/Button */ "./components/Button.js");
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config */ "./config.js");
 var _jsxFileName = "/Users/queued/workspace/recursed-ice-palace.github.io/contents/Downloads/Download.js";
+
 
 
  // const alertComingSoon = () => {
@@ -916,10 +920,10 @@ var _jsxFileName = "/Users/queued/workspace/recursed-ice-palace.github.io/conten
 // }
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, "Download the DLC v1.0 now:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, "Download the DLC ", _config__WEBPACK_IMPORTED_MODULE_3__["version"], " now:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 12
     },
     __self: this
   }), "(Auto installation is Windows only.)", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -929,33 +933,33 @@ var _jsxFileName = "/Users/queued/workspace/recursed-ice-palace.github.io/conten
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 14
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/static/downloads/TheIcePalace-Windows.zip",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 15
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 16
     },
     __self: this
   }, "Auto Install")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/static/downloads/TheIcePalace-Manual.zip",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 19
     },
     __self: this
   }, "Manual Install"))));

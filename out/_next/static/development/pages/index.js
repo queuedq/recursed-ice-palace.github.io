@@ -877,11 +877,12 @@ var Form = function Form(_ref) {
 /*!*******************!*\
   !*** ./config.js ***!
   \*******************/
-/*! exports provided: TILE_SIZE, CHEST_SIZE, getTileSize, getChestSize, backgroundSize, title, description, keywords, author, menus, screenshots, googleAnalytics, palette, breakpoints */
+/*! exports provided: version, TILE_SIZE, CHEST_SIZE, getTileSize, getChestSize, backgroundSize, title, description, keywords, author, menus, screenshots, googleAnalytics, palette, breakpoints */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "version", function() { return version; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TILE_SIZE", function() { return TILE_SIZE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CHEST_SIZE", function() { return CHEST_SIZE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getTileSize", function() { return getTileSize; });
@@ -896,6 +897,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "googleAnalytics", function() { return googleAnalytics; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "palette", function() { return palette; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "breakpoints", function() { return breakpoints; });
+var version = 'v1.0.0';
 var TILE_SIZE = 16;
 var CHEST_SIZE = 32;
 function getTileSize() {
