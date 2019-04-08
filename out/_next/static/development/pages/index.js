@@ -897,7 +897,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "googleAnalytics", function() { return googleAnalytics; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "palette", function() { return palette; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "breakpoints", function() { return breakpoints; });
-var version = 'v1.0.0';
+var version = 'v1.0.1';
 var TILE_SIZE = 16;
 var CHEST_SIZE = 32;
 function getTileSize() {
