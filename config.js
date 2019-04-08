@@ -1,3 +1,5 @@
+export const version = 'v1.0.0'
+
 export const TILE_SIZE = 16
 export const CHEST_SIZE = 32
 
